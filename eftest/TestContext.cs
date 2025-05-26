@@ -10,17 +10,9 @@ public class Test
     public string SomeValue { get; set; }
 }
 
-public class TestToBeRemoved
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string SomeValue { get; set; }
-}
-
 public class TestContext : DbContext
 {
     public DbSet<Test> Tests { get; set; }
-    public DbSet<TestToBeRemoved> TestToBeRemoved { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlite("Data Source=./MyTestDb.sqlite");
