@@ -7,12 +7,14 @@ public class Test
 {
     public int Id { get; set; }
     public string Name { get; set; }
+    public string SomeValue { get; set; }
 }
 
 public class TestToBeRemoved
 {
     public int Id { get; set; }
     public string Name { get; set; }
+    public string SomeValue { get; set; }
 }
 
 public class TestContext : DbContext
